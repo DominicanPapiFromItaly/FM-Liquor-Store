@@ -1,0 +1,1333 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FM Liquor Store</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,600;1,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a href="#" class="nav-logo">FM Liquor Store</a>
+  <ul class="nav-links">
+    <li><a href="#about">Sobre nosotros</a></li>
+    <li><a href="#menu">Menú</a></li>
+    <li><a href="#gallery">Galería</a></li>
+    <li><a href="#booking">Contactos</a></li>
+  </ul>
+  <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- MENÚ MÓVIL -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#about" onclick="toggleMenu()">Sobre nosotros</a>
+  <a href="#menu" onclick="toggleMenu()">Menú</a>
+  <a href="#gallery" onclick="toggleMenu()">Galería</a>
+  <a href="#booking" onclick="toggleMenu()">Contacto</a>
+</div>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <h1 class="hero-h1">Somos<br><em>FM Liquor Store</em></h1>
+    <p class="hero-sub">Donde cada experiencia es una obra maestra</p>
+    <p class="hero-urdu"></p>
+    <div class="hero-actions">
+      <a href="#menu" class="btn-primary">Explorar Menú ↗</a>
+      <a href="#booking" class="btn-outline">Contáctanos</a>
+    </div>
+  </div>
+</section>
+
+<!-- INSIGNIAS DE CONFIANZA -->
+<div id="trust">
+  <div class="trust-inner">
+    <div class="trust-item">
+      <div class="trust-icon">⭐</div>
+      <span>4.3 Calificación en Google</span>
+    </div>
+    <div class="trust-item">
+      <div class="trust-icon">🏆</div>
+      <span>Mejores Precios de Licorería en Samaná</span>
+    </div>
+    <div class="trust-item">
+      <div class="trust-icon">📶</div>
+      <span>Wi‑Fi Gratis</span>
+    </div>
+    <div class="trust-item">
+      <div class="trust-icon">🍹</div>
+      <span>Gran Variedad de Bebidas</span>
+    </div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="about-image-wrap reveal">
+    <div class="about-img" style="background: linear-gradient(135deg, #1c1c1c 0%, #2d2d2d 50%, #1a1a1a 100%); font-size: 100px; color: rgba(201,169,110,0.15); display: flex; align-items: center; justify-content: center;">👨‍🍳</div>
+    <div class="about-badge">
+      <span class="number">5+</span>
+      <span class="label">Años de Excelencia</span>
+    </div>
+  </div>
+  <div class="about-text reveal">
+    <div class="section-label">Nuestra Historia</div>
+    <h2 class="section-title">Creado con <em>pasión</em>,<br>servido con orgullo</h2>
+    <div class="gold-line"></div>
+    <p>FM Liquor Store nació de un sueño sencillo: traer experiencias culinarias de clase mundial a las calles de Karachi. Lo que comenzó como un proyecto apasionado en 2020 se ha convertido en el destino gastronómico más celebrado de la ciudad.</p>
+    <p>Cada plato que servimos lleva el alma de la rica herencia culinaria de Pakistán, reinterpretada con técnicas modernas y los mejores ingredientes locales. No solo servimos comida — creamos recuerdos.</p>
+    <p style="font-family: 'Noto Nastaliq Urdu', serif; direction: rtl; font-size: 16px; color: rgba(201,169,110,0.8);">ہم صرف کھانا نہیں پیش کرتے — ہم یادیں بناتے ہیں</p>
+    <div class="owner-sig">
+      <div class="owner-avatar">👤</div>
+      <div class="owner-info">
+        <div class="name">Nombre Apellido</div>
+        <div class="role">Fundador</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MENÚ -->
+<section id="menu">
+  <div class="section-label reveal">Nuestro Menú Exclusivo</div>
+  <h2 class="section-title reveal">Sabores <em>excepcionales</em>,<br>creados para conocedores</h2>
+  <div class="gold-line reveal"></div>
+
+  <div class="menu-tabs reveal">
+    <button class="menu-tab active" onclick="switchTab('todos', event)">Todos</button>
+    <button class="menu-tab" onclick="switchTab('ron', event)">Ron</button>
+    <button class="menu-tab" onclick="switchTab('cerveza', event)">Cerveza</button>
+    <button class="menu-tab" onclick="switchTab('vino', event)">Vino</button>
+    <button class="menu-tab" onclick="switchTab('whisky', event)">Whisky</button>
+    <button class="menu-tab" onclick="switchTab('especiales', event)">Bebidas Especiales</button>
+    <button class="menu-tab" onclick="switchTab('refrescos', event)">Refrescos</button>
+  </div>
+
+  <!-- RON -->
+<div class="menu-cat menu-grid active" id="cat-ron">
+
+  <!-- Brugal -->
+  <a href="Brugal.html" class="menu-item">
+    <div class="menu-item-tag">Premium</div>
+    <img src="assets/Brugal1880.png" alt="Brugal Extra Viejo" class="menu-item-img">
+    <div class="menu-item-name">Brugal</div>
+    <div class="menu-item-desc">Haz clic para ver todos los Brugales</div>
+  </a>
+
+  <!-- Barceló -->
+  <a href="Barcelo.html" class="menu-item">
+    <div class="menu-item-tag">Clásico</div>
+    <img src="assets/BarceloImperialRareBlendsMizunaraCask.png" alt="Ron Barceló" class="menu-item-img">
+    <div class="menu-item-name">Barceló</div>
+    <div class="menu-item-desc">Haz clic para ver todos los Barcelós</div>
+  </a>
+
+  <!-- Bermúdez -->
+    <div class="menu-item">
+    <div class="menu-item-tag">Reserva</div>
+    <img src="assets/bermudez-ron-dominicano.png" alt="Ron Bermúdez" class="menu-item-img">
+    <div class="menu-item-name">Bermúdez</div>
+    </div>
+
+  <!-- Abuelo -->
+  <a href="Abuelo.html" class="menu-item">
+    <div class="menu-item-tag">Premium</div>
+    <img src="assets/Abuelo12.png" alt="Ron Abuelo" class="menu-item-img">
+    <div class="menu-item-name">Abuelo</div>
+    <div class="menu-item-desc">Haz clic para ver todos los Abuelo</div>
+  </a>
+
+  <!-- Rum Puntacana -->
+  <a href="Puntacana.html" class="menu-item">
+    <div class="menu-item-tag">Edición Limitada</div>
+    <img src="assets/PuntacanaBlackRumMAX.png" alt="Rum Puntacana" class="menu-item-img">
+    <div class="menu-item-name">Rum Puntacana</div>
+    <div class="menu-item-desc">Haz clic para ver todos los Puntacana</div>
+  </a>
+
+  <!-- Macorix -->
+  <a href="Macorix.html" class="menu-item">
+    <div class="menu-item-tag">Popular</div>
+    <img src="assets/MacorixRebel.png" alt="Ron Macorix" class="menu-item-img">
+    <div class="menu-item-name">Macorix</div>
+    <div class="menu-item-desc">Haz clic para ver todos los Macorix</div>
+  </a>
+
+  <!-- Ripiao -->
+  <div class="menu-item">
+   <div class="menu-item-tag">Clásico</div>
+    <img src="assets/Ripiao.webp" alt="Ron Ripiao" class="menu-item-img">
+    <div class="menu-item-name">Ripiao</div>
+    </div>
+
+  <!-- Don Miguel -->
+  <a href="DonMiguel.html" class="menu-item">
+    <div class="menu-item-tag">Reserva</div>
+    <img src="assets/DonMiguelBlu.png" alt="Ron Don Miguel" class="menu-item-img">
+    <div class="menu-item-name">Don Miguel</div>
+    <div class="menu-item-desc">Haz clic para ver todos los Don Miguel</div>
+  </a>
+
+  <!-- Isla de Oro -->
+  <a href="IslaDeOro.html" class="menu-item">
+    <div class="menu-item-tag">Especial</div>
+    <img src="assets/IslaDeOroDorado.png" alt="Ron Isla de Oro" class="menu-item-img">
+    <div class="menu-item-name">Isla de Oro</div>
+    <div class="menu-item-desc">Haz clic para ver todos los Isla de Oro</div>
+  </a>
+
+  <!-- Zacapa -->
+  <a href="Zacapa.html" class="menu-item">
+    <div class="menu-item-tag">Premium</div>
+    <img src="assets/Zacapa.png" alt="Ron Zacapa" class="menu-item-img">
+    <div class="menu-item-name">Zacapa</div>
+    <div class="menu-item-desc">Haz clic para ver todos los Zacapa</div>
+  </a>
+
+</div>
+
+  <!-- CERVEZA -->
+  <div class="menu-cat menu-grid active" id="cat-cerveza">
+
+  <!-- Presidente -->
+  <a href="Presidente.html" class="menu-item">
+    <div class="menu-item-tag">Popular</div>
+    <img src="assets/Presidente.png" alt="Cerveza Presidente" class="menu-item-img">
+    <div class="menu-item-name">Presidente</div>
+    <div class="menu-item-desc">Haz clic para ver todas las Presidente</div>
+  </a>
+
+  <!-- Heineken -->
+  <a href="Heineken.html" class="menu-item">
+    <div class="menu-item-tag">Internacional</div>
+    <img src="assets/Heineken.png" alt="Cerveza Heineken" class="menu-item-img">
+    <div class="menu-item-name">Heineken</div>
+    <div class="menu-item-desc">Haz clic para ver todas las Heineken</div>
+  </a>
+
+  <!-- Corona -->
+  <a href="Corona.html" class="menu-item">
+    <div class="menu-item-tag">Clásica</div>
+    <img src="assets/Corona.webp" alt="Cerveza Corona" class="menu-item-img">
+    <div class="menu-item-name">Corona</div>
+    <div class="menu-item-desc">Haz clic para ver todas las Corona</div>
+  </a>
+
+  <!-- Modelo -->
+  <a href="Modelo.html" class="menu-item">
+    <div class="menu-item-tag">Premium</div>
+    <img src="assets/Modelo-Negra.png" alt="Cerveza Modelo" class="menu-item-img">
+    <div class="menu-item-name">Modelo</div>
+    <div class="menu-item-desc">Haz clic para ver todas las Modelo</div>
+  </a>
+
+  <!-- Stella Artois -->
+  <div class="menu-item">
+   <div class="menu-item-tag">Premium</div>
+    <img src="assets/StellaArtois.png" alt="Cerveza Stella Artois" class="menu-item-img">
+    <div class="menu-item-name">Stella Artois</div>
+    </div>
+
+  <!-- Brahma -->
+  <div class="menu-item">
+   <div class="menu-item-tag">Popular</div>
+    <img src="assets/Brahma.png" alt="Cerveza Brahma" class="menu-item-img">
+    <div class="menu-item-name">Brahma</div>
+    </div>
+
+  <!-- Bohemia -->
+  <div class="menu-item">
+   <div class="menu-item-tag">Clásica</div>
+    <img src="assets/Bohemia.png" alt="Cerveza Bohemia" class="menu-item-img">
+    <div class="menu-item-name">Bohemia</div>
+    </div>
+
+  <!-- Miller -->
+  <a href="Miller.html" class="menu-item">
+    <div class="menu-item-tag">Internacional</div>
+    <img src="assets/Miller.png" alt="Cerveza Miller" class="menu-item-img">
+    <div class="menu-item-name">Miller</div>
+    <div class="menu-item-desc">Haz clic para ver todas las Miller</div>
+  </a>
+
+  <!-- Paulaner -->
+  <a href="Paulaner.html" class="menu-item">
+    <div class="menu-item-tag">Especial</div>
+    <img src="assets/PaulanerWebster.png" alt="Cerveza Paulaner" class="menu-item-img">
+    <div class="menu-item-name">Paulaner</div>
+    <div class="menu-item-desc">Haz clic para ver todas las Paulaner</div>
+  </a>
+
+  <!-- Erdinger -->
+  <a href="Erdinger.html" class="menu-item">
+    <div class="menu-item-tag">Especial</div>
+    <img src="assets/ErdingerNegra.png" alt="Cerveza Erdinger" class="menu-item-img">
+    <div class="menu-item-name">Erdinger</div>
+    <div class="menu-item-desc">Haz clic para ver todas las Erdinger</div>
+  </a>
+
+  <!-- Estrella Galicia -->
+  <div class="menu-item">
+   <div class="menu-item-tag">Premium</div>
+    <img src="assets/estrella-galicia.png" alt="Cerveza Estrella Galicia" class="menu-item-img">
+    <div class="menu-item-name">Estrella Galicia</div>
+    </div>
+  
+  <!-- Coors -->
+  <a href="Coors.html" class="menu-item">
+    <div class="menu-item-tag">Internacional</div>
+    <img src="assets/CoorsOriginal.png" alt="Cerveza Coors" class="menu-item-img">
+    <div class="menu-item-name">Coors</div>
+    <div class="menu-item-desc">Haz clic para ver todas las Coors</div>
+  </a>
+
+  <!-- Michelob Ultra -->
+   <div class="menu-item">
+   <div class="menu-item-tag">Light</div>
+    <img src="assets/Michelob.png" alt="Michelob Ultra" class="menu-item-img">
+    <div class="menu-item-name">Michelob Ultra</div>
+    </div>
+
+  <!-- Red -->
+  <div class="menu-item">
+   <div class="menu-item-tag">Premium</div>
+    <img src="assets/Red.png" alt="Cerveza Red" class="menu-item-img">
+    <div class="menu-item-name">Red</div>
+    </div>
+
+    <!-- 5,0 -->
+  <div class="menu-item">
+   <div class="menu-item-tag">Clasico</div>
+    <img src="assets/5,0Red.png" alt="Cerveza Red" class="menu-item-img">
+    <div class="menu-item-name">5,0</div>
+    </div>
+
+</div>
+
+  <div class="menu-cat menu-grid active" id="cat-vino">
+
+  <!-- Los Encinos -->
+  <a href="Encinos.html" class="menu-item">
+    <div class="menu-item-tag">Premium</div>
+    <img src="assets/Encinos.png" alt="Vino Los Encinos" class="menu-item-img">
+    <div class="menu-item-name">Los Encinos</div>
+    <div class="menu-item-desc">Haz clic para ver todos Los Encinos</div>
+  </a>
+
+  <!-- Vino Tinto La Fuerza -->
+  <div class="menu-item">
+   <div class="menu-item-tag">Clásico</div>
+    <img src="assets/LaFuerza.png" alt="Vino Tinto La Fuerza" class="menu-item-img">
+    <div class="menu-item-name">La Fuerza</div>
+    </div>
+
+  <!-- Palmar -->
+  <div class="menu-item">
+   <div class="menu-item-tag">Popular</div>
+    <img src="assets/Palmar.png" alt="Vino Palmar" class="menu-item-img">
+    <div class="menu-item-name">Palmar</div>
+    </div>
+
+  <!-- Oak Vineyards -->
+  <div class="menu-item">
+   <div class="menu-item-tag">Internacional</div>
+    <img src="assets/Oak.png" alt="Oak Vineyards" class="menu-item-img">
+    <div class="menu-item-name">Oak Vineyards</div>
+    </div>
+
+  <!-- Solar De Ricot -->
+  <div class="menu-item">
+   <div class="menu-item-tag">Reserva</div>
+    <img src="assets/Solar.png" alt="Solar De Ricot" class="menu-item-img">
+    <div class="menu-item-name">Solar De Ricot</div>
+    </div>
+
+  <!-- Valchiero -->
+  <div class="menu-item">
+   <div class="menu-item-tag">Premium</div>
+    <img src="assets/Valchiero.png" alt="Vino Valchiero" class="menu-item-img">
+    <div class="menu-item-name">Valchiero</div>
+    </div>
+
+  <!-- Culitos -->
+  <a href="Culitos.html" class="menu-item">
+    <div class="menu-item-tag">Popular</div>
+    <img src="assets/CulitoRosa.png" alt="Vino Culitos" class="menu-item-img">
+    <div class="menu-item-name">Culitos</div>
+    <div class="menu-item-desc">Haz clic para ver todos los Culitos</div>
+  </a>
+
+  <!-- 19 Crimes -->
+  <a href="19Crimes.html" class="menu-item">
+    <div class="menu-item-tag">Internacional</div>
+    <img src="assets/19CrimesMartha.png" alt="19 Crimes" class="menu-item-img">
+    <div class="menu-item-name">19 Crimes</div>
+    <div class="menu-item-desc">Haz clic para ver todos los 19 Crimes</div>
+  </a>
+
+  <!-- Menage a Trois -->
+  <a href="MenageTrois.html" class="menu-item">
+    <div class="menu-item-tag">Premium</div>
+    <img src="assets/ManageTroisRed.png" alt="Menage a Trois" class="menu-item-img">
+    <div class="menu-item-name">Menage a Trois</div>
+    <div class="menu-item-desc">Haz clic para ver todos los Menage a Trois</div>
+  </a>
+
+  <!-- Patron Citronge -->
+  <a href="Patron.html" class="menu-item">
+    <div class="menu-item-tag">Especial</div>
+    <img src="assets/Patron.png" alt="Patron Citronge" class="menu-item-img">
+    <div class="menu-item-name">Patron</div>
+    <div class="menu-item-desc">Haz clic para ver todos los Patron</div>
+  </a>
+
+  <!-- Protos -->
+  <a href="Protos.html" class="menu-item">
+    <div class="menu-item-tag">Reserva</div>
+    <img src="assets/ProtosRoble.png" alt="Vino Protos" class="menu-item-img">
+    <div class="menu-item-name">Protos</div>
+    <div class="menu-item-desc">Haz clic para ver todos los Protos</div>
+  </a>
+
+  <!-- Main & Vine -->
+  <a href="MainVine.html" class="menu-item">
+    <div class="menu-item-tag">Popular</div>
+    <img src="assets/MainWhite.png" alt="Main & Vine" class="menu-item-img">
+    <div class="menu-item-name">Main & Vine</div>
+    <div class="menu-item-desc">Haz clic para ver todos los Main & Vine</div>
+  </a>
+
+  <!-- Scarlett -->
+  <a href="Scarlett.html" class="menu-item">
+    <div class="menu-item-tag">Especial</div>
+    <img src="assets/ScarlettGold.png" alt="Vino Scarlett" class="menu-item-img">
+    <div class="menu-item-name">Scarlett</div>
+    <div class="menu-item-desc">Haz clic para ver todos los Scarlett</div>
+  </a>
+
+  <!-- Primal Roots -->
+  <div class="menu-item">
+   <div class="menu-item-tag">Internacional</div>
+    <img src="assets/PrimalRoots.png" alt="Primal Roots" class="menu-item-img">
+    <div class="menu-item-name">Primal Roots</div>
+    </div>
+
+  <!-- Mureda -->
+  <div class="menu-item">
+   <div class="menu-item-tag">Clásico</div>
+    <img src="assets/Mureda.png" alt="Vino Mureda" class="menu-item-img">
+    <div class="menu-item-name">Mureda</div>
+    </div>
+
+  <!-- Carlo Rossi -->
+  <a href="CarloRossi.html" class="menu-item">
+    <div class="menu-item-tag">Popular</div>
+    <img src="assets/CarloRossiWhite.png" alt="Carlo Rossi" class="menu-item-img">
+    <div class="menu-item-name">Carlo Rossi</div>
+    <div class="menu-item-desc">Haz clic para ver todos los Carlo Rossi</div>
+  </a>
+
+  <!-- Frontera -->
+  <a href="Frontera.html" class="menu-item">
+    <div class="menu-item-tag">Clásico</div>
+    <img src="assets/FronteraTropical.png" alt="Vino Frontera" class="menu-item-img">
+    <div class="menu-item-name">Frontera</div>
+    <div class="menu-item-desc">Haz clic para ver todos los Frontera</div>
+  </a>
+
+  <!-- Gato Negro -->
+  <a href="GatoNegro.html" class="menu-item">
+    <div class="menu-item-tag">Popular</div>
+    <img src="assets/GatoNeroAzzurro.png" alt="Vino Gato Negro" class="menu-item-img">
+    <div class="menu-item-name">Gato Negro</div>
+    <div class="menu-item-desc">Haz clic para ver todos los Gato Negro</div>
+  </a>
+
+  <!-- 689 -->
+  <a href="Pottano.html" class="menu-item">
+    <div class="menu-item-tag">Especial</div>
+    <img src="assets/689.png" alt="Vino Pottano" class="menu-item-img">
+    <div class="menu-item-name">689</div>
+  </a>
+
+  <!-- Cavit -->
+  <a href="Cavit.html" class="menu-item">
+    <div class="menu-item-tag">Internacional</div>
+    <img src="assets/CavitRosso.png" alt="Vino Cavit" class="menu-item-img">
+    <div class="menu-item-name">Cavit</div>
+    <div class="menu-item-desc">Haz clic para ver todos los Cavit</div>
+  </a>
+
+  <!-- Albapiano -->
+  <a href="Albapiano.html" class="menu-item">
+    <div class="menu-item-tag">Clásico</div>
+    <img src="assets/Albapiano.png" alt="Vino Albapiano" class="menu-item-img">
+    <div class="menu-item-name">Albapiano</div>
+    <div class="menu-item-desc">Haz clic para ver todos los Albapiano</div>
+  </a>
+
+  <!-- Marqués de Cáceres -->
+  <a href="MarquesCaceres.html" class="menu-item">
+    <div class="menu-item-tag">Reserva</div>
+    <img src="assets/MarquesCaceres.png" alt="Marqués de Cáceres" class="menu-item-img">
+    <div class="menu-item-name">Marqués de Cáceres</div>
+    <div class="menu-item-desc">Haz clic para ver todos los Marqués de Cáceres</div>
+  </a>
+
+  <!-- Bogle -->
+  <a href="Bogle.html" class="menu-item">
+    <div class="menu-item-tag">Premium</div>
+    <img src="assets/Bogle.png" alt="Vino Bogle" class="menu-item-img">
+    <div class="menu-item-name">Bogle</div>
+    <div class="menu-item-desc">Haz clic para ver todos los Bogle</div>
+  </a>
+
+  <!-- Apothic -->
+  <a href="Apothic.html" class="menu-item">
+    <div class="menu-item-tag">Especial</div>
+    <img src="assets/AphoticCab.png" alt="Vino Apothic" class="menu-item-img">
+    <div class="menu-item-name">Apothic</div>
+    <div class="menu-item-desc">Haz clic para ver todos los Apothic</div>
+  </a>
+
+  <!-- La Fiole du Pape -->
+  <div class="menu-item">
+   <div class="menu-item-tag">Reserva</div>
+    <img src="assets/FiolePape.png" alt="La Fiole du Pape" class="menu-item-img">
+    <div class="menu-item-name">La Fiole du Pape</div>
+    </div>
+
+  <!-- Maschio Prosecco -->
+  <div class="menu-item">
+   <div class="menu-item-tag">Espumoso</div>
+    <img src="assets/Prosecco.png" alt="Maschio Prosecco" class="menu-item-img">
+    <div class="menu-item-name">Maschio Prosecco</div>
+    </div>
+
+  <!-- Estelar -->
+  <a href="Estelar.html" class="menu-item">
+    <div class="menu-item-tag">Popular</div>
+    <img src="assets/EstelarRed.png" alt="Vino Estelar" class="menu-item-img">
+    <div class="menu-item-name">Estelar</div>
+    <div class="menu-item-desc">Haz clic para ver todos los Estelar</div>
+  </a>
+
+  <!-- Estrellas -->
+  <div class="menu-item">
+   <div class="menu-item-tag">Popular</div>
+    <img src="assets/Estrellas.png" alt="Vino Estrellas" class="menu-item-img">
+    <div class="menu-item-name">Estrellas</div>
+    </div>
+
+  <!-- María Torres -->
+  <div class="menu-item">
+   <div class="menu-item-tag">Clásico</div>
+    <img src="assets/MariaTorres.png" alt="Vino María Torres" class="menu-item-img">
+    <div class="menu-item-name">María Torres</div>
+    </div>
+
+  <!-- Silk & Spice -->
+  <div class="menu-item">
+   <div class="menu-item-tag">Internacional</div>
+    <img src="assets/Silk.png" alt="Silk & Spice" class="menu-item-img">
+    <div class="menu-item-name">Silk & Spice</div>
+    </div>
+</div>
+
+  <!-- WHISKY -->
+  <div class="menu-cat menu-grid active" id="cat-whisky">
+
+  <!-- Mack Albert -->
+  <a href="MackAlbert.html" class="menu-item">
+    <div class="menu-item-tag">Popular</div>
+    <img src="assets/MackAlbert.png" alt="Mack Albert" class="menu-item-img">
+    <div class="menu-item-name">Mack Albert</div>
+    <div class="menu-item-desc">Haz clic para ver todos los Mack Albert</div>
+  </a>
+
+  <!-- Label -->
+  <a href="Label.html" class="menu-item">
+    <div class="menu-item-tag">Clásico</div>
+    <img src="assets/Label.png" alt="Label Whisky" class="menu-item-img">
+    <div class="menu-item-name">Label</div>
+    <div class="menu-item-desc">Haz clic para ver todos los Label</div>
+  </a>
+
+  <!-- Passport -->
+  <a href="Passport.html" class="menu-item">
+    <div class="menu-item-tag">Popular</div>
+    <img src="assets/Passport.png" alt="Passport Whisky" class="menu-item-img">
+    <div class="menu-item-name">Passport</div>
+    <div class="menu-item-desc">Haz clic para ver todos los Passport</div>
+  </a>
+
+  <!-- Cutty Sark -->
+  <a href="CuttySark.html" class="menu-item">
+    <div class="menu-item-tag">Clásico</div>
+    <img src="assets/CuttySark.png" alt="Cutty Sark" class="menu-item-img">
+    <div class="menu-item-name">Cutty Sark</div>
+    <div class="menu-item-desc">Haz clic para ver todos los Cutty Sark</div>
+  </a>
+
+  <!-- Drambuie -->
+  <a href="Drambuie.html" class="menu-item">
+    <div class="menu-item-tag">Especial</div>
+    <img src="assets/Drambuie.png" alt="Drambuie" class="menu-item-img">
+    <div class="menu-item-name">Drambuie</div>
+    <div class="menu-item-desc">Haz clic para ver todos los Drambuie</div>
+  </a>
+
+  <!-- The Famous Grouse -->
+  <a href="FamousGrouse.html" class="menu-item">
+    <div class="menu-item-tag">Clásico</div>
+    <img src="assets/FamousGrouse.png" alt="The Famous Grouse" class="menu-item-img">
+    <div class="menu-item-name">The Famous Grouse</div>
+    <div class="menu-item-desc">Haz clic para ver todos los Famous Grouse</div>
+  </a>
+
+  <!-- Mac Arthur's -->
+  <a href="MacArthurs.html" class="menu-item">
+    <div class="menu-item-tag">Popular</div>
+    <img src="assets/MacArthurs.png" alt="Mac Arthur's" class="menu-item-img">
+    <div class="menu-item-name">Mac Arthur's</div>
+    <div class="menu-item-desc">Haz clic para ver todos los Mac Arthur's</div>
+  </a>
+
+  <!-- Jack Daniel's -->
+  <a href="JackDaniels.html" class="menu-item">
+    <div class="menu-item-tag">Premium</div>
+    <img src="assets/JackDaniels.png" alt="Jack Daniel's" class="menu-item-img">
+    <div class="menu-item-name">Jack Daniel's</div>
+    <div class="menu-item-desc">Haz clic para ver todos los Jack Daniel's</div>
+  </a>
+
+  <!-- Johnnie Walker -->
+  <a href="JohnnieWalker.html" class="menu-item">
+    <div class="menu-item-tag">Premium</div>
+    <img src="assets/JohnnieWalker.png" alt="Johnnie Walker" class="menu-item-img">
+    <div class="menu-item-name">Johnnie Walker</div>
+    <div class="menu-item-desc">Haz clic para ver todos los Johnnie Walker</div>
+  </a>
+
+  <!-- Buchanan's -->
+  <a href="Buchanans.html" class="menu-item">
+    <div class="menu-item-tag">Premium</div>
+    <img src="assets/Buchanans.png" alt="Buchanan's" class="menu-item-img">
+    <div class="menu-item-name">Buchanan's</div>
+    <div class="menu-item-desc">Haz clic para ver todos los Buchanan's</div>
+  </a>
+
+  <!-- Singleton -->
+  <a href="Singleton.html" class="menu-item">
+    <div class="menu-item-tag">Reserva</div>
+    <img src="assets/Singleton.png" alt="Singleton" class="menu-item-img">
+    <div class="menu-item-name">Singleton</div>
+    <div class="menu-item-desc">Haz clic para ver todos los Singleton</div>
+  </a>
+
+  <!-- Hennessy -->
+  <a href="Hennessy.html" class="menu-item">
+    <div class="menu-item-tag">Premium</div>
+    <img src="assets/Hennessy.png" alt="Hennessy Cognac" class="menu-item-img">
+    <div class="menu-item-name">Hennessy</div>
+    <div class="menu-item-desc">Haz clic para ver todos los Hennessy</div>
+  </a>
+
+  <!-- Chivas Regal -->
+  <a href="ChivasRegal.html" class="menu-item">
+    <div class="menu-item-tag">Premium</div>
+    <img src="assets/ChivasRegal.png" alt="Chivas Regal" class="menu-item-img">
+    <div class="menu-item-name">Chivas Regal</div>
+    <div class="menu-item-desc">Haz clic para ver todos los Chivas Regal</div>
+  </a>
+
+  <!-- Macallan -->
+  <a href="Macallan.html" class="menu-item">
+    <div class="menu-item-tag">Reserva</div>
+    <img src="assets/Macallan.png" alt="Macallan" class="menu-item-img">
+    <div class="menu-item-name">Macallan</div>
+    <div class="menu-item-desc">Haz clic para ver todos los Macallan</div>
+  </a>
+
+  <!-- Crown Royale -->
+  <a href="CrownRoyale.html" class="menu-item">
+    <div class="menu-item-tag">Premium</div>
+    <img src="assets/CrownRoyale.png" alt="Crown Royale" class="menu-item-img">
+    <div class="menu-item-name">Crown Royale</div>
+    <div class="menu-item-desc">Haz clic para ver todos los Crown Royale</div>
+  </a>
+
+  <!-- Old Parr -->
+  <a href="OldParr.html" class="menu-item">
+    <div class="menu-item-tag">Reserva</div>
+    <img src="assets/OldParr.png" alt="Old Parr" class="menu-item-img">
+    <div class="menu-item-name">Old Parr</div>
+    <div class="menu-item-desc">Haz clic para ver todos los Old Parr</div>
+  </a>
+
+  <!-- Black & White -->
+  <a href="BlackWhite.html" class="menu-item">
+    <div class="menu-item-tag">Clásico</div>
+    <img src="assets/BlackWhite.png" alt="Black & White" class="menu-item-img">
+    <div class="menu-item-name">Black & White</div>
+    <div class="menu-item-desc">Haz clic para ver todos los Black & White</div>
+  </a>
+
+  <!-- Zacapa -->
+  <a href="Zacapa.html" class="menu-item">
+    <div class="menu-item-tag">Premium</div>
+    <img src="assets/Zacapa.png" alt="Ron Zacapa" class="menu-item-img">
+    <div class="menu-item-name">Zacapa</div>
+    <div class="menu-item-desc">Haz clic para ver todos los Zacapa</div>
+  </a>
+
+  <!-- Fireball -->
+  <a href="Fireball.html" class="menu-item">
+    <div class="menu-item-tag">Especial</div>
+    <img src="assets/Fireball.png" alt="Fireball Whisky" class="menu-item-img">
+    <div class="menu-item-name">Fireball</div>
+    <div class="menu-item-desc">Haz clic para ver todos los Fireball</div>
+  </a>
+
+</div>
+
+<div class="menu-cat menu-grid active" id="cat-especiales">
+
+  <!-- Ciroc -->
+  <a href="Ciroc.html" class="menu-item">
+    <div class="menu-item-tag">Premium</div>
+    <img src="assets/Ciroc.png" alt="Ciroc Vodka" class="menu-item-img">
+    <div class="menu-item-name">Ciroc</div>
+    <div class="menu-item-desc">Haz clic para ver todas las Ciroc</div>
+  </a>
+
+  <!-- Chandon -->
+  <a href="Chandon.html" class="menu-item">
+    <div class="menu-item-tag">Espumoso</div>
+    <img src="assets/Chandon.png" alt="Chandon Champagne" class="menu-item-img">
+    <div class="menu-item-name">Chandon</div>
+    <div class="menu-item-desc">Haz clic para ver todos los Chandon</div>
+  </a>
+
+  <!-- Segura Viudas -->
+  <a href="SeguraViudas.html" class="menu-item">
+    <div class="menu-item-tag">Espumoso</div>
+    <img src="assets/SeguraViudas.png" alt="Segura Viudas" class="menu-item-img">
+    <div class="menu-item-name">Segura Viudas</div>
+    <div class="menu-item-desc">Haz clic para ver todos los Segura Viudas</div>
+  </a>
+
+  <!-- Moet & Chandon -->
+  <a href="MoetChandon.html" class="menu-item">
+    <div class="menu-item-tag">Premium</div>
+    <img src="assets/MoetChandon.png" alt="Moet & Chandon" class="menu-item-img">
+    <div class="menu-item-name">Moet & Chandon</div>
+    <div class="menu-item-desc">Haz clic para ver todos los Moet & Chandon</div>
+  </a>
+
+  <!-- Veuve du Vernay -->
+  <a href="VeuveVernay.html" class="menu-item">
+    <div class="menu-item-tag">Espumoso</div>
+    <img src="assets/VeuveVernay.png" alt="Veuve du Vernay" class="menu-item-img">
+    <div class="menu-item-name">Veuve du Vernay</div>
+    <div class="menu-item-desc">Haz clic para ver todos los Veuve du Vernay</div>
+  </a>
+
+  <!-- Vodka -->
+  <a href="Vodka.html" class="menu-item">
+    <div class="menu-item-tag">Clásico</div>
+    <img src="assets/Vodka.png" alt="Vodka" class="menu-item-img">
+    <div class="menu-item-name">Vodka</div>
+    <div class="menu-item-desc">Haz clic para ver todas las Vodkas</div>
+  </a>
+
+  <!-- Martini -->
+  <a href="Martini.html" class="menu-item">
+    <div class="menu-item-tag">Especial</div>
+    <img src="assets/Martini.png" alt="Martini" class="menu-item-img">
+    <div class="menu-item-name">Martini</div>
+    <div class="menu-item-desc">Haz clic para ver todos los Martini</div>
+  </a>
+
+  <!-- Gibson's -->
+  <a href="Gibsons.html" class="menu-item">
+    <div class="menu-item-tag">Clásico</div>
+    <img src="assets/Gibsons.png" alt="Gibson's Gin" class="menu-item-img">
+    <div class="menu-item-name">Gibson's</div>
+    <div class="menu-item-desc">Haz clic para ver todos los Gibson's</div>
+  </a>
+
+  <!-- Disaronno -->
+  <a href="Disaronno.html" class="menu-item">
+    <div class="menu-item-tag">Especial</div>
+    <img src="assets/Disaronno.png" alt="Disaronno Amaretto" class="menu-item-img">
+    <div class="menu-item-name">Disaronno</div>
+    <div class="menu-item-desc">Haz clic para ver todos los Disaronno</div>
+  </a>
+
+  <!-- Amaretto -->
+  <a href="Amaretto.html" class="menu-item">
+    <div class="menu-item-tag">Especial</div>
+    <img src="assets/Amaretto.png" alt="Amaretto" class="menu-item-img">
+    <div class="menu-item-name">Amaretto</div>
+    <div class="menu-item-desc">Haz clic para ver todos los Amaretto</div>
+  </a>
+
+  <!-- Carolans -->
+  <a href="Carolans.html" class="menu-item">
+    <div class="menu-item-tag">Especial</div>
+    <img src="assets/Carolans.png" alt="Carolans Irish Cream" class="menu-item-img">
+    <div class="menu-item-name">Carolans</div>
+    <div class="menu-item-desc">Haz clic para ver todos los Carolans</div>
+  </a>
+
+  <!-- Brogans -->
+  <a href="Brogans.html" class="menu-item">
+    <div class="menu-item-tag">Especial</div>
+    <img src="assets/Brogans.png" alt="Brogans Irish Cream" class="menu-item-img">
+    <div class="menu-item-name">Brogans</div>
+    <div class="menu-item-desc">Haz clic para ver todos los Brogans</div>
+  </a>
+
+  <!-- Cacao -->
+  <a href="Cacao.html" class="menu-item">
+    <div class="menu-item-tag">Especial</div>
+    <img src="assets/Cacao.png" alt="Licor de Cacao" class="menu-item-img">
+    <div class="menu-item-name">Cacao</div>
+    <div class="menu-item-desc">Haz clic para ver todos los Cacao</div>
+  </a>
+
+  <!-- La Grange -->
+  <a href="LaGrange.html" class="menu-item">
+    <div class="menu-item-tag">Internacional</div>
+    <img src="assets/LaGrange.png" alt="La Grange" class="menu-item-img">
+    <div class="menu-item-name">La Grange</div>
+    <div class="menu-item-desc">Haz clic para ver todos los La Grange</div>
+  </a>
+
+  <!-- Master of Mixes -->
+  <a href="MasterMixes.html" class="menu-item">
+    <div class="menu-item-tag">Especial</div>
+    <img src="assets/MasterMixes.png" alt="Master of Mixes" class="menu-item-img">
+    <div class="menu-item-name">Master of Mixes</div>
+    <div class="menu-item-desc">Haz clic para ver todos los Master of Mixes</div>
+  </a>
+
+  <!-- Beefeater -->
+  <a href="Beefeater.html" class="menu-item">
+    <div class="menu-item-tag">Clásico</div>
+    <img src="assets/Beefeater.png" alt="Beefeater Gin" class="menu-item-img">
+    <div class="menu-item-name">Beefeater</div>
+    <div class="menu-item-desc">Haz clic para ver todos los Beefeater</div>
+  </a>
+
+  <!-- Hendrick's -->
+  <a href="Hendricks.html" class="menu-item">
+    <div class="menu-item-tag">Premium</div>
+    <img src="assets/Hendricks.png" alt="Hendrick's Gin" class="menu-item-img">
+    <div class="menu-item-name">Hendrick's</div>
+    <div class="menu-item-desc">Haz clic para ver todos los Hendrick's</div>
+  </a>
+
+  <!-- Cointreau -->
+  <a href="Cointreau.html" class="menu-item">
+    <div class="menu-item-tag">Especial</div>
+    <img src="assets/Cointreau.png" alt="Cointreau" class="menu-item-img">
+    <div class="menu-item-name">Cointreau</div>
+    <div class="menu-item-desc">Haz clic para ver todos los Cointreau</div>
+  </a>
+
+  <!-- Grand Marnier -->
+  <a href="GrandMarnier.html" class="menu-item">
+    <div class="menu-item-tag">Especial</div>
+    <img src="assets/GrandMarnier.png" alt="Grand Marnier" class="menu-item-img">
+    <div class="menu-item-name">Grand Marnier</div>
+    <div class="menu-item-desc">Haz clic para ver todos los Grand Marnier</div>
+  </a>
+
+    <!-- JP Chenet -->
+  <a href="JPChenet.html" class="menu-item">
+    <div class="menu-item-tag">Internacional</div>
+    <img src="assets/JPChenet.png" alt="JP Chenet" class="menu-item-img">
+    <div class="menu-item-name">JP Chenet</div>
+    <div class="menu-item-desc">Haz clic para ver todos los JP Chenet</div>
+  </a>
+
+  <!-- Absolut -->
+  <a href="Absolut.html" class="menu-item">
+    <div class="menu-item-tag">Clásico</div>
+    <img src="assets/Absolut.png" alt="Absolut Vodka" class="menu-item-img">
+    <div class="menu-item-name">Absolut</div>
+    <div class="menu-item-desc">Haz clic para ver todas las Absolut</div>
+  </a>
+
+  <!-- Stoli / Stolichnaya -->
+  <a href="Stolichnaya.html" class="menu-item">
+    <div class="menu-item-tag">Internacional</div>
+    <img src="assets/Stolichnaya.png" alt="Stolichnaya Vodka" class="menu-item-img">
+    <div class="menu-item-name">Stolichnaya</div>
+    <div class="menu-item-desc">Haz clic para ver todas las Stolichnaya</div>
+  </a>
+
+  <!-- Cayaman -->
+  <a href="Cayaman.html" class="menu-item">
+    <div class="menu-item-tag">Especial</div>
+    <img src="assets/Cayaman.png" alt="Cayaman" class="menu-item-img">
+    <div class="menu-item-name">Cayaman</div>
+    <div class="menu-item-desc">Haz clic para ver todos los Cayaman</div>
+  </a>
+
+  <!-- Tito's -->
+  <a href="Titos.html" class="menu-item">
+    <div class="menu-item-tag">Premium</div>
+    <img src="assets/Titos.png" alt="Tito's Vodka" class="menu-item-img">
+    <div class="menu-item-name">Tito's</div>
+    <div class="menu-item-desc">Haz clic para ver todos los Tito's</div>
+  </a>
+
+  <!-- Grey Goose -->
+  <a href="GreyGoose.html" class="menu-item">
+    <div class="menu-item-tag">Premium</div>
+    <img src="assets/GreyGoose.png" alt="Grey Goose Vodka" class="menu-item-img">
+    <div class="menu-item-name">Grey Goose</div>
+    <div class="menu-item-desc">Haz clic para ver todos los Grey Goose</div>
+  </a>
+
+  <!-- Eristoff -->
+  <a href="Eristoff.html" class="menu-item">
+    <div class="menu-item-tag">Clásico</div>
+    <img src="assets/Eristoff.png" alt="Eristoff Vodka" class="menu-item-img">
+    <div class="menu-item-name">Eristoff</div>
+    <div class="menu-item-desc">Haz clic para ver todos los Eristoff</div>
+  </a>
+
+  <!-- Baileys -->
+  <a href="Baileys.html" class="menu-item">
+    <div class="menu-item-tag">Especial</div>
+    <img src="assets/Baileys.png" alt="Baileys Irish Cream" class="menu-item-img">
+    <div class="menu-item-name">Baileys</div>
+    <div class="menu-item-desc">Haz clic para ver todos los Baileys</div>
+  </a>
+
+  <!-- Casamigos -->
+  <a href="Casamigos.html" class="menu-item">
+    <div class="menu-item-tag">Premium</div>
+    <img src="assets/Casamigos.png" alt="Casamigos Tequila" class="menu-item-img">
+    <div class="menu-item-name">Casamigos</div>
+    <div class="menu-item-desc">Haz clic para ver todos los Casamigos</div>
+  </a>
+
+  <!-- 1800 -->
+  <a href="1800.html" class="menu-item">
+    <div class="menu-item-tag">Clásico</div>
+    <img src="assets/1800.png" alt="Tequila 1800" class="menu-item-img">
+    <div class="menu-item-name">1800</div>
+    <div class="menu-item-desc">Haz clic para ver todos los 1800</div>
+  </a>
+
+  <!-- Jose Cuervo -->
+  <a href="JoseCuervo.html" class="menu-item">
+    <div class="menu-item-tag">Clásico</div>
+    <img src="assets/JoseCuervo.png" alt="Jose Cuervo Tequila" class="menu-item-img">
+    <div class="menu-item-name">Jose Cuervo</div>
+    <div class="menu-item-desc">Haz clic para ver todos los Jose Cuervo</div>
+  </a>
+
+  <!-- Cinco de Mayo -->
+  <a href="CincoDeMayo.html" class="menu-item">
+    <div class="menu-item-tag">Especial</div>
+    <img src="assets/CincoDeMayo.png" alt="Cinco de Mayo Tequila" class="menu-item-img">
+    <div class="menu-item-name">Cinco de Mayo</div>
+    <div class="menu-item-desc">Haz clic para ver todos los Cinco de Mayo</div>
+  </a>
+
+  <!-- Tiscaz -->
+  <a href="Tiscaz.html" class="menu-item">
+    <div class="menu-item-tag">Popular</div>
+    <img src="assets/Tiscaz.png" alt="Tiscaz Tequila" class="menu-item-img">
+    <div class="menu-item-name">Tiscaz</div>
+    <div class="menu-item-desc">Haz clic para ver todos los Tiscaz</div>
+  </a>
+
+  <!-- Don Julio -->
+  <a href="DonJulio.html" class="menu-item">
+    <div class="menu-item-tag">Premium</div>
+    <img src="assets/DonJulio.png" alt="Don Julio Tequila" class="menu-item-img">
+    <div class="menu-item-name">Don Julio</div>
+    <div class="menu-item-desc">Haz clic para ver todos los Don Julio</div>
+  </a>
+
+  <!-- Hennessy -->
+  <a href="Hennessy.html" class="menu-item">
+    <div class="menu-item-tag">Cognac</div>
+    <img src="assets/Hennessy.png" alt="Hennessy Cognac" class="menu-item-img">
+    <div class="menu-item-name">Hennessy</div>
+    <div class="menu-item-desc">Haz clic para ver todos los Hennessy</div>
+  </a>
+</div>
+
+<div class="menu-cat menu-grid active" id="cat-refrescos">
+
+  <!-- San Pellegrino -->
+  <a href="SanPellegrino.html" class="menu-item">
+    <div class="menu-item-tag">Premium</div>
+    <img src="assets/SanPellegrino.png" alt="San Pellegrino" class="menu-item-img">
+    <div class="menu-item-name">San Pellegrino</div>
+    <div class="menu-item-desc">Haz clic para ver todos los San Pellegrino</div>
+  </a>
+
+  <!-- Red Bull -->
+  <div class="menu-item">
+    <div class="menu-item-tag">Energy</div>
+    <img src="assets/RedBull.png" alt="Red Bull" class="menu-item-img">
+    <div class="menu-item-name">Red Bull</div>
+    </div>
+
+  <!-- Country Club -->
+  <a href="CountryClub.html" class="menu-item">
+    <div class="menu-item-tag">Popular</div>
+    <img src="assets/CountryArancio.png" alt="Country Club" class="menu-item-img">
+    <div class="menu-item-name">Country Club</div>
+    <div class="menu-item-desc">Haz clic para ver todos los Country Club</div>
+  </a>
+
+  <!-- Rica -->
+  <a href="Rica.html" class="menu-item">
+    <div class="menu-item-tag">Natural</div>
+    <img src="assets/Rica.png" alt="Rica Jugo" class="menu-item-img">
+    <div class="menu-item-name">Rica</div>
+    <div class="menu-item-desc">Haz clic para ver todos los Rica</div>
+  </a>
+
+  <!-- Pepsi -->
+  <div class="menu-item">
+    <div class="menu-item-tag">Clásico</div>
+    <img src="assets/Pepsi.png" alt="Pepsi" class="menu-item-img">
+    <div class="menu-item-name">Pepsi</div>
+    </div>
+
+  <!-- Coca Cola -->
+  <div class="menu-item">
+    <div class="menu-item-tag">Clásico</div>
+    <img src="assets/Coca.png" alt="Coca Cola" class="menu-item-img">
+    <div class="menu-item-name">Coca Cola</div>
+    </div>
+
+  <!-- Sprite -->
+  <div class="menu-item">
+    <div class="menu-item-tag">Clásico</div>
+    <img src="assets/Sprite.png" alt="Sprite" class="menu-item-img">
+    <div class="menu-item-name">Sprite</div>
+    </div>
+
+  <!-- Agua Aloe Vera King -->
+  <div class="menu-item">
+    <div class="menu-item-tag">Natural</div>
+    <img src="assets/AloeVera.png" alt="Agua Aloe Vera King" class="menu-item-img">
+    <div class="menu-item-name">Aloe Vera King</div>
+    </div>
+
+  <!-- La Croix -->
+  <a href="LaCroix.html" class="menu-item">
+    <div class="menu-item-tag">Light</div>
+    <img src="assets/CroixAzzurra.png" alt="La Croix" class="menu-item-img">
+    <div class="menu-item-name">La Croix</div>
+    <div class="menu-item-desc">Haz clic para ver todas las La Croix</div>
+  </a>
+
+  <!-- Ocean Spray -->
+  <a href="OceanSpray.html" class="menu-item">
+    <div class="menu-item-tag">Natural</div>
+    <img src="assets/OceanRossa.png" alt="Ocean Spray" class="menu-item-img">
+    <div class="menu-item-name">Ocean Spray</div>
+    <div class="menu-item-desc">Haz clic para ver todas las Ocean Spray</div>
+  </a>
+
+  <!-- Mott's -->
+  <div class="menu-item">
+    <div class="menu-item-tag">Natural</div>
+    <img src="assets/Motts.png" alt="Mott's Jugo" class="menu-item-img">
+    <div class="menu-item-name">Mott's</div>
+    </div>
+
+  <!-- Vive 100 -->
+  <div class="menu-item">
+    <div class="menu-item-tag">Energy</div>
+    <img src="assets/Vive100.png" alt="Vive 100" class="menu-item-img">
+    <div class="menu-item-name">Vive 100</div>
+    </div>
+  
+  <!-- Canada Dry -->
+  <a href="CanadaDry.html" class="menu-item">
+    <div class="menu-item-tag">Clásico</div>
+    <img src="assets/CanadaDry.png" alt="Canada Dry" class="menu-item-img">
+    <div class="menu-item-name">Canada Dry</div>
+    <div class="menu-item-desc">Haz clic para ver todos los Canada Dry</div>
+  </a>
+
+  <!-- Goya Agua de Coco -->
+  <div class="menu-item">
+    <div class="menu-item-tag">Natural</div>
+    <img src="assets/Goya.png" alt="Agua de Coco Goya" class="menu-item-img">
+    <div class="menu-item-name">Goya Agua de Coco</div>
+    </div>
+
+  <!-- 911 -->
+  <a href="911.html" class="menu-item">
+    <div class="menu-item-tag">Energy</div>
+    <img src="assets/911.png" alt="911 Energy Drink" class="menu-item-img">
+    <div class="menu-item-name">911</div>
+    <div class="menu-item-desc">Haz clic para ver todos los 911</div>
+  </a>
+
+  <!-- Gatorade -->
+  <a href="Gatorade.html" class="menu-item">
+    <div class="menu-item-tag">Deportivo</div>
+    <img src="assets/GatoradeRossa.png" alt="Gatorade" class="menu-item-img">
+    <div class="menu-item-name">Gatorade</div>
+    <div class="menu-item-desc">Haz clic para ver todos los Gatorade</div>
+  </a>
+
+  <!-- Perrier -->
+  <div class="menu-item">
+    <div class="menu-item-tag">Premium</div>
+    <img src="assets/Perrier.png" alt="Perrier Agua" class="menu-item-img">
+    <div class="menu-item-name">Perrier</div>
+    </div>
+</div>
+
+</section>
+
+<section class="gallery-section" id="gallery">
+  <section id="gallery">
+  <div style="padding: 0;">
+    <div class="section-label reveal">Nuestro Mundo</div>
+    <h2 class="section-title reveal">Un <em>festín visual</em><br>antes del real</h2>
+    <div class="gold-line reveal"></div>
+  </div>
+
+  <div class="marquee-wrap">
+    <div class="marquee-track">
+
+      <!-- SEQUENCIA ORIGINAL -->
+      <div class="marquee-img-wrap"><img src="assets/Img1.jpg" alt="Brugal Añejo"></div>
+      <div class="marquee-img-wrap"><img src="assets/img2.jpg" alt="Presidente"></div>
+      <div class="marquee-img-wrap"><img src="assets/img3.jpg" alt="Vino Rioja"></div>
+      <div class="marquee-img-wrap"><img src="assets/Img4.webp" alt="Johnnie Walker"></div>
+      <div class="marquee-img-wrap"><img src="assets/img5.jpg" alt="Brugal Añejo"></div>
+      <div class="marquee-img-wrap"><img src="assets/img6.jpg" alt="Presidente"></div>
+      
+      <!-- SEQUENCIA DUPLICADA (para loop infinito) -->
+      <div class="marquee-img-wrap"><img src="assets/Img1.jpg" alt="Brugal Añejo"></div>
+      <div class="marquee-img-wrap"><img src="assets/img2.jpg" alt="Presidente"></div>
+      <div class="marquee-img-wrap"><img src="assets/img3.jpg" alt="Vino Rioja"></div>
+      <div class="marquee-img-wrap"><img src="assets/Img4.webp" alt="Johnnie Walker"></div>
+      <div class="marquee-img-wrap"><img src="assets/img5.jpg" alt="Brugal Añejo"></div>
+      <div class="marquee-img-wrap"><img src="assets/img6.jpg" alt="Presidente"></div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- TESTIMONIOS -->
+<section id="testimonials">
+  <div class="section-label reveal">Lo que dicen</div>
+  <h2 class="section-title reveal">Historias de nuestros<br><em>queridos</em> clientes</h2>
+  <div class="gold-line reveal"></div>
+  <div class="testimonials-grid">
+
+    <div class="testi-card reveal">
+      <div class="testi-quote">"</div>
+      <p class="testi-text">Muy agradable, la gente excelente.</p>
+      <div class="testi-stars">
+        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+      </div>
+      <div class="testi-author">
+        <div class="testi-avatar">👨</div>
+        <div>
+          <div class="testi-name">Yderki Alvarado</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="testi-card reveal">
+      <div class="testi-quote">"</div>
+      <p class="testi-text">Un lugar muy familiar.</p>
+      <div class="testi-stars">
+        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+      </div>
+      <div class="testi-author">
+        <div class="testi-avatar">👨</div>
+        <div>
+          <div class="testi-name">Aniel Esquea</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="testi-card reveal">
+      <div class="testi-quote">"</div>
+      <p class="testi-text">Muy buen servicio 👍</p>
+      <div class="testi-stars">
+        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+      </div>
+      <div class="testi-author">
+        <div class="testi-avatar">👩</div>
+        <div>
+          <div class="testi-name">Rossinna Holguín</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<!-- CONTACTO -->
+<section id="booking">
+  <div class="booking-wrap">
+    
+    <!-- Colonna Sinistra: Informazioni -->
+    <div class="booking-info">
+      <div class="section-label reveal">Contáctanos</div>
+      <h2 class="section-title reveal">Haz de cada<br>ocasión <em>inolvidable</em></h2>
+      <div class="gold-line reveal"></div>
+      <p class="reveal">Ya sea una cena íntima, una celebración familiar o un encuentro corporativo — FM Liquor Store promete hacerlo extraordinario. Contáctanos.</p>
+      
+      <div class="contact-details reveal">
+        <div class="contact-item">
+          <div class="contact-icon">📞</div>
+          <span><a href="tel:0018095382957" style="color: inherit; text-decoration: none;">+1 (809) 538-2957</a></span>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">💬</div>
+          <span>WhatsApp: +1 (809) 538-2957</span>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">📧</div>
+          <span>contacto@fmliquorstore.com</span>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">📍</div>
+          <span>Samaná, República Dominicana</span>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">🕐</div>
+          <span>Abierto todos los días: 8:00 — 0:00</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Colonna Destra: Modello 3D Heineken -->
+    <div class="booking-3d">
+      <model-viewer 
+        src="assets/heineken_beer_bottle_3d_model.glb" 
+        alt="Heineken Beer Bottle 3D Model"
+        auto-rotate 
+        camera-controls 
+        shadow-intensity="1">
+      </model-viewer>
+    </div>
+
+  </div>
+</section>
+
+<!-- Libreria Google Model-Viewer (se non l'hai già aggiunta nell' <head>) -->
+<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
+
+
+<!-- MAP -->
+<div id="map-section">
+  <div class="map-wrap">
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3794.901939197364!2d-69.3486585!3d19.2064759!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8eaee1e413f3eee9%3A0xd08c3a136754bc49!2sFM%20Liquor%20Store%20%26%20Grill!5e0!3m2!1ses!2sdo!4v1721600000000!5m2!1ses!2sdo" 
+      width="100%" 
+      height="100%" 
+      style="border:0;" 
+      allowfullscreen="" 
+      loading="lazy" 
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+</div>
+
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <span class="logo">FM Liquor Store</span>
+      <p>La licorería más celebrada de Samaná — donde la herencia dominicana se encuentra con la hospitalidad y el lujo de clase mundial.</p>
+      
+      <div class="footer-social">
+  <!-- WhatsApp -->
+  <a href="https://wa.me/18095382957?text=Hola%20FM%20Liquor%20Store!" target="_blank" rel="noopener noreferrer">
+    <img src="assets/whatsapp-logo.png" alt="WhatsApp" style="width:28px; height:28px;">
+  </a>
+  
+  <!-- Llamadas -->
+  <a href="tel:+18095382957">
+    <img src="assets/phone-icon.png" alt="Llamar" style="width:28px; height:28px;">
+  </a>
+  
+  <!-- Gmail -->
+  <a href="mailto:contacto@fmliquorstore.com">
+    <img src="assets/gmail.png" alt="Gmail" style="width:28px; height:28px;">
+  </a>
+</div>
+
+    </div>
+    <div class="footer-col">
+      <h4>Explorar</h4>
+      <ul>
+        <li><a href="#about">→ Sobre Nosotros</a></li>
+        <li><a href="#menu">→ Nuestro Menú</a></li>
+        <li><a href="#gallery">→ Galería</a></li>
+        <li><a href="#team">→ Nuestro Equipo</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Servicios</h4>
+      <ul>
+        <li><a href="#">→ Eventos Privados</a></li>
+        <li><a href="#">→ Eventos Corporativos</a></li>
+        <li><a href="#">→ Catering</a></li>
+        <li><a href="#faq">→ Preguntas Frecuentes</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contacto</h4>
+      <ul>
+        <li><a href="#">📍 Samaná, República Dominicana</a></li>
+        <li><a href="[tel:+18095382957]">📞 +1 (809) 538-2957</a></li>
+        <li><a href="#">💬 WhatsApp</a></li>
+        <li><a href="#">📧 contacto@fmliquorstore.com</a></li>
+        <li><a href="#">🕐 8:00 AM – 12:00 AM</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 FM Liquor Store. Todos los derechos reservados</span>
+  </div>
+</footer>
+
+
+<!-- WHATSAPP BUTTON -->
+<a href="https://wa.me/18095382957?text=Hola%20FM%20Liquor%20Store!%20Quiero%20más%20información." 
+   class="wa-btn" target="_blank" rel="noopener noreferrer">
+  <span class="wa-tooltip">Chatea en WhatsApp</span>
+  <img src="assets/whatsapp-logo.png" alt="WhatsApp">
+</a>
+
+
+<script src="js/app.js"></script>
+</body>
+</html>
