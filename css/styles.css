@@ -206,6 +206,7 @@
       letter-spacing: -2px;
       color: var(--white);
       margin-bottom: 16px;
+      margin-top: 10px;
       opacity: 0;
       animation: fadeUp 1s ease 0.8s forwards;
     }
