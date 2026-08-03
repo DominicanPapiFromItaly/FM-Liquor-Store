@@ -38,6 +38,7 @@
       justify-content: space-between;
       padding: 28px 60px;
       transition: all 0.5s ease;
+      margin-bottom: 50px;
     }
 
     nav.scrolled {
@@ -156,7 +157,7 @@
   inset: 0;
   background:
     linear-gradient(to bottom, rgba(10,10,10,0.3) 0%, rgba(10,10,10,0.1) 40%, rgba(10,10,10,0.7) 100%),
-    url('../assets/Home.jpg') center/cover no-repeat;
+    url('../assets/HOME.png') center/cover no-repeat;
   animation: heroZoom 20s ease-in-out infinite alternate;
 }
 
@@ -206,7 +207,7 @@
       letter-spacing: -2px;
       color: var(--white);
       margin-bottom: 16px;
-      margin-top: 10px;
+      margin-top: 90px;
       opacity: 0;
       animation: fadeUp 1s ease 0.8s forwards;
     }
@@ -1475,7 +1476,7 @@
     .hero-bg {
   background:
     linear-gradient(to bottom, rgba(10,10,10,0.3) 0%, rgba(10,10,10,0.1) 40%, rgba(10,10,10,0.7) 100%),
-    url('../assets/Home.jpg') center/cover no-repeat;
+    url('../assets/HOME.png') center/cover no-repeat;
 }
 
 .menu-tab {
